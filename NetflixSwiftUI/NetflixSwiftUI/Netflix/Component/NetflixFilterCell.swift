@@ -8,11 +8,41 @@
 import SwiftUI
 
 struct NetflixFilterCell: View {
+    
+    var title: String = "Categories"
+    var isDropdown: Bool = true
+    var isSelected: Bool = false
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack(spacing: 4) {
+            Text(title)
+            if isDropdown {
+                Image(systemName: "chevron.down")
+            }
+        }.padding(.horizontal, 16)
+            .padding(.vertical, 8)
+            .background(
+                ZStack {
+                    if isSelected {
+                        Capsule(style: .circular)
+                            .fill(.netflixDarkGray)
+                    } else {
+                        Capsule(style: .circular)
+                            .stroke(lineWidth: 1)
+                    }
+                }
+            )
+            .foregroundColor(.netflixLightGray)
     }
 }
 
 #Preview {
-    NetflixFilterCell()
+    ZStack {
+        Color.black.ignoresSafeArea()
+        VStack {
+            NetflixFilterCell()
+            NetflixFilterCell(isDropdown: false)
+            NetflixFilterCell(isSelected: true)
+        }
+    }
 }

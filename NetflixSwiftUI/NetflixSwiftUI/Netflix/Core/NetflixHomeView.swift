@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct NetflixHomeView: View {
+    
     var body: some View {
         ZStack {
             Color.netflixBlack.ignoresSafeArea()
@@ -27,11 +28,11 @@ struct NetflixHomeView: View {
             HStack(spacing: 16) {
                 Image(systemName: "tv.badge.wifi")
                     .onTapGesture {
-                        <#code#>
+                        
                     }
                 Image(systemName: "magnifyingglass")
                     .onTapGesture {
-                        <#code#>
+                        
                     }
             }.font(.title2)
         }
