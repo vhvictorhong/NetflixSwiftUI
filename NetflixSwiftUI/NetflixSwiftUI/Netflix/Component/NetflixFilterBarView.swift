@@ -57,8 +57,9 @@ struct NetflixFilterBarView: View {
                     }
                 }
             }.padding(.vertical, 4)
-        }.scrollIndicators(.hidden)
-            .animation(.bouncy, value: selectedFilter)
+        }
+        .scrollIndicators(.hidden)
+        .animation(.bouncy, value: selectedFilter)
     }
 }
 

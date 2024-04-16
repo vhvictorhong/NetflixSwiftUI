@@ -18,10 +18,124 @@ struct NetflixHeroCell: View {
     var onMyListPressed: (() -> Void)? = nil
 
     var body: some View {
-        ZStack {
-            
+        ZStack(alignment: .bottom) {
+            backgroundImage
+            VStack(spacing: 16) {
+                VStack(spacing: 0) {
+                    if isNetflixFilm {
+                        netflixFilm
+                    }
+                    titleText
+                }
+                categoriesView
+                buttonsView
+            }
+            .padding(64)
+            .background(
+                LinearGradient(
+                    colors: [
+                        .netflixBlack.opacity(0),
+                        .netflixBlack.opacity(0.4),
+                        .netflixBlack.opacity(0.4),
+                        .netflixBlack.opacity(0.4),
+                    ],
+                    startPoint: .top,
+                    endPoint: .bottom)
+                .cornerRadius(10)
+                .padding(.horizontal, 40)
+            )
         }
-        
+        .foregroundColor(.netflixWhite)
+        .onTapGesture {
+            onBackgroundPressed?()
+        }
+    }
+    
+    private var backgroundImage: some View {
+        Rectangle()
+            .opacity(0.001)
+            .overlay {
+                ImageLoaderView(urlString: imageName,
+                                cornerRadius: 10,
+                                aspectRatio: 0.8,
+                                resizingMode: .fill)
+                .padding(.horizontal, 40)
+            }.clipped()
+    }
+    
+    private var netflixFilm: some View {
+        HStack(spacing: 8) {
+            Text("N")
+                .foregroundStyle(.netflixRed)
+                .font(.largeTitle)
+                .fontWeight(.black)
+            Text("FILM")
+                .kerning(3)
+                .font(.subheadline)
+                .fontWeight(.semibold)
+                .foregroundStyle(.netflixLightGray)
+        }
+    }
+    
+    private var titleText: some View {
+        Text(title)
+            .font(.system(
+                size: 50,
+                weight: .medium,
+                design: .serif))
+    }
+    
+    private var categoriesView: some View {
+        HStack(spacing: 8) {
+            ForEach(categories, id: \.self) { category in
+                Text(category)
+                    .font(.callout)
+                if category != categories.last {
+                    Circle()
+                        .frame(width: 4, height: 4)
+                }
+            }
+        }
+    }
+    
+    private var buttonsView: some View {
+        HStack(spacing: 16) {
+            playButton
+            listButton
+        }
+        .padding(.horizontal, 16)
+        .font(.callout)
+        .fontWeight(.medium)
+    }
+    
+    private var playButton: some View {
+        HStack {
+            Image(systemName: "play.fill")
+            Text("Play")
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, 8)
+        .foregroundStyle(.netflixDarkGray)
+        .background(.netflixWhite)
+        .cornerRadius(4)
+        .onTapGesture {
+            onPlayPressed?()
+        }
+    }
+    
+    private var listButton: some View {
+        HStack {
+            Image(systemName: "plus")
+            Text("My List")
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, 8)
+        .foregroundStyle(.netflixWhite)
+        .background(.netflixDarkGray)
+        .cornerRadius(4)
+        .onTapGesture {
+            onPlayPressed?()
+        }
     }
 }
 

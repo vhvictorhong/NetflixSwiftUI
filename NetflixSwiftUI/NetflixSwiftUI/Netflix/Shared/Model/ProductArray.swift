@@ -11,7 +11,7 @@ struct ProductArray: Codable {
     let products: [Product]
     let total, skip, limit: Int
     
-    struct Product: Codable {
+    struct Product: Codable, Identifiable {
         let id: Int
         let title, description: String
         let price: Int

@@ -10,6 +10,8 @@ import SwiftUI
 struct ImageLoaderView: View {
     
     var urlString: String = Constants.randomImage
+    var cornerRadius: CGFloat = 4
+    var aspectRatio: CGFloat = 0.8
     var resizingMode: ContentMode = .fill
     
     var body: some View {
@@ -18,6 +20,7 @@ struct ImageLoaderView: View {
             .overlay {
                 imageView(resizingMode: resizingMode)
             }.clipped()
+            .cornerRadius(cornerRadius)
     }
     
     private func imageView(resizingMode: ContentMode) -> some View {
@@ -32,7 +35,7 @@ struct ImageLoaderView: View {
             case .success(let image):
                 image
                     .resizable()
-                    .aspectRatio(contentMode: resizingMode)
+                    .aspectRatio(aspectRatio, contentMode: resizingMode)
             case .failure(_):
                 Image(systemName: "photo.fill")
             @unknown default:
@@ -44,7 +47,7 @@ struct ImageLoaderView: View {
 
 #Preview {
     ImageLoaderView()
-        .cornerRadius(30)
+//        .cornerRadius(30)
         .padding(40)
         .padding(.vertical, 60)
 }

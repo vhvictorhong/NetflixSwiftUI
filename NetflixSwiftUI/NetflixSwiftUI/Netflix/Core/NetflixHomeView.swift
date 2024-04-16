@@ -27,7 +27,8 @@ struct NetflixHomeView: View {
                     }.padding(.top, 16)
                 Spacer()
             }
-        }.foregroundColor(.netflixWhite)
+        }
+        .foregroundColor(.netflixWhite)
     }
     
     private var header: some View {
@@ -44,7 +45,8 @@ struct NetflixHomeView: View {
                     .onTapGesture {
                         
                     }
-            }.font(.title2)
+            }
+            .font(.title2)
         }
     }
 }

@@ -19,18 +19,19 @@ struct NetflixFilterCell: View {
             if isDropdown {
                 Image(systemName: "chevron.down")
             }
-        }.padding(.horizontal, 16)
-            .padding(.vertical, 8)
-            .background(
-                ZStack {
-                    Capsule(style: .circular)
-                        .fill(.netflixDarkGray)
-                        .opacity(isSelected ? 1 : 0)
-                    Capsule(style: .circular)
-                        .stroke(lineWidth: 1)
-                }
-            )
-            .foregroundColor(.netflixLightGray)
+        }
+        .padding(.horizontal, 16)
+        .padding(.vertical, 8)
+        .background(
+            ZStack {
+                Capsule(style: .circular)
+                    .fill(.netflixDarkGray)
+                    .opacity(isSelected ? 1 : 0)
+                Capsule(style: .circular)
+                    .stroke(lineWidth: 1)
+            }
+        )
+        .foregroundColor(.netflixLightGray)
     }
 }
 
