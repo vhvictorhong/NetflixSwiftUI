@@ -13,6 +13,7 @@
 		2B19F9D52BCE0E860063E82A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B19F9D42BCE0E860063E82A /* Preview Assets.xcassets */; };
 		2B19F9DF2BCE108B0063E82A /* NetflixHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B19F9DE2BCE108B0063E82A /* NetflixHomeView.swift */; };
 		2B19F9E12BCE1DA20063E82A /* NetflixFilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B19F9E02BCE1DA20063E82A /* NetflixFilterCell.swift */; };
+		2B19F9E32BCE22C60063E82A /* NetflixFilterBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B19F9E22BCE22C60063E82A /* NetflixFilterBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		2B19F9D42BCE0E860063E82A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2B19F9DE2BCE108B0063E82A /* NetflixHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixHomeView.swift; sourceTree = "<group>"; };
 		2B19F9E02BCE1DA20063E82A /* NetflixFilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixFilterCell.swift; sourceTree = "<group>"; };
+		2B19F9E22BCE22C60063E82A /* NetflixFilterBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixFilterBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				2B19F9E02BCE1DA20063E82A /* NetflixFilterCell.swift */,
+				2B19F9E22BCE22C60063E82A /* NetflixFilterBarView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B19F9E32BCE22C60063E82A /* NetflixFilterBarView.swift in Sources */,
 				2B19F9D02BCE0E860063E82A /* ContentView.swift in Sources */,
 				2B19F9CE2BCE0E860063E82A /* NetflixSwiftUIApp.swift in Sources */,
 				2B19F9E12BCE1DA20063E82A /* NetflixFilterCell.swift in Sources */,
