@@ -74,26 +74,22 @@ struct NetflixHomeView: View {
                     .opacity(0)
                     .frame(height: fullHeaderSize.height)
                 if let heroProduct {
-                    heroCell
+                    heroCell(product: heroProduct)
                 }
-                ForEach(0..<20) { _ in
-                    Rectangle()
-                        .fill(Color.red)
-                        .frame(height: 200)
-                }
+                movieCells
             }
         }
         .scrollIndicators(.hidden)
     }
     
-    private var heroCell: some View {
+    private func heroCell(product: ProductArray.Product) -> some View {
         NetflixHeroCell(
-            imageName: heroProduct?.images.first ?? "",
+            imageName: product.firstImage,
             isNetflixFilm: true,
-            title: heroProduct?.title ?? "",
+            title: product.title,
             categories: [
-                heroProduct?.category.capitalized ?? "",
-                heroProduct?.brand ?? ""]) {
+                product.category.capitalized,
+                product.brand]) {
                     
                 } onPlayPressed: {
                     
@@ -101,6 +97,32 @@ struct NetflixHomeView: View {
                     
                 }
                 .padding(24)
+    }
+    
+    private var movieCells: some View {
+        LazyVStack(spacing: 16) {
+            ForEach(Array(productRows.enumerated()), id: \.offset) { (rowIndex, row) in
+                VStack(alignment: .leading, spacing: 6) {
+                    Text(row.title)
+                        .font(.headline)
+                        .padding(.horizontal, 16)
+                    ScrollView(.horizontal) {
+                        LazyHStack {
+                            ForEach(Array(row.products.enumerated()), id: \.offset) { (index, product) in
+                                NetflixMovieCell(
+                                    imageName: product.firstImage,
+                                    title: product.title,
+                                    isRecentlyAdded: product.recentlyAdded,
+                                    topTenRanking: rowIndex == 1 ? (index + 1) : nil
+                                )
+                            }
+                        }
+                        .padding(.horizontal, 16)
+                    }
+                    .scrollIndicators(.hidden)
+                }
+            }
+        }
     }
     
     private func getData() async {

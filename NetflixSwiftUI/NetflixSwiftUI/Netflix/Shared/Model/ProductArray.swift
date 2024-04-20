@@ -20,5 +20,13 @@ struct ProductArray: Codable {
         let brand, category: String
         let thumbnail: String
         let images: [String]
+        
+        var firstImage: String {
+            images.first ?? Constants.randomImage
+        }
+        
+        let recentlyAdded: Bool = {
+            return Int.random(in: 1...4) == 1
+        }()
     }
 }

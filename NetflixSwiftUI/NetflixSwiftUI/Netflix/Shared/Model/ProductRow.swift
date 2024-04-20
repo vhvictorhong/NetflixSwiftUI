@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct ProductRow {
+struct ProductRow: Identifiable {
+    let id: UUID = UUID()
     let title: String
     let products: [ProductArray.Product]
 }
