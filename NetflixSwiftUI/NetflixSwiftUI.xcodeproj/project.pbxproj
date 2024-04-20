@@ -21,6 +21,7 @@
 		2B19F9EF2BCED2490063E82A /* ProductArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B19F9EE2BCED2490063E82A /* ProductArray.swift */; };
 		2B19F9F12BCED43C0063E82A /* UserArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B19F9F02BCED43C0063E82A /* UserArray.swift */; };
 		2BB1EEBB2BD345E80036CB7D /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2BB1EEBA2BD345E80036CB7D /* SDWebImageSwiftUI */; };
+		2BB1EEBD2BD351D10036CB7D /* ProductRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1EEBC2BD351D10036CB7D /* ProductRow.swift */; };
 		2BFF5C172BD3443C003184EA /* SwiftfulUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2BFF5C162BD3443C003184EA /* SwiftfulUI */; };
 		2BFF5C1A2BD34464003184EA /* SwiftfulRouting in Frameworks */ = {isa = PBXBuildFile; productRef = 2BFF5C192BD34464003184EA /* SwiftfulRouting */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,7 @@
 		2B19F9EB2BCED1500063E82A /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
 		2B19F9EE2BCED2490063E82A /* ProductArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductArray.swift; sourceTree = "<group>"; };
 		2B19F9F02BCED43C0063E82A /* UserArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserArray.swift; sourceTree = "<group>"; };
+		2BB1EEBC2BD351D10036CB7D /* ProductRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				2B19F9EE2BCED2490063E82A /* ProductArray.swift */,
+				2BB1EEBC2BD351D10036CB7D /* ProductRow.swift */,
 				2B19F9F02BCED43C0063E82A /* UserArray.swift */,
 			);
 			path = Model;
@@ -228,6 +231,7 @@
 				2B19F9F12BCED43C0063E82A /* UserArray.swift in Sources */,
 				2B19F9E52BCECB370063E82A /* NetflixHeroCell.swift in Sources */,
 				2B19F9CE2BCE0E860063E82A /* NetflixSwiftUIApp.swift in Sources */,
+				2BB1EEBD2BD351D10036CB7D /* ProductRow.swift in Sources */,
 				2B19F9E12BCE1DA20063E82A /* NetflixFilterCell.swift in Sources */,
 				2B19F9DF2BCE108B0063E82A /* NetflixHomeView.swift in Sources */,
 				2B19F9EA2BCECD8E0063E82A /* Constants.swift in Sources */,
