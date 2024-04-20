@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftfulUI
 
 struct NetflixHeroCell: View {
     
@@ -30,37 +31,30 @@ struct NetflixHeroCell: View {
                 categoriesView
                 buttonsView
             }
-            .padding(64)
+            .padding(24)
             .background(
                 LinearGradient(
                     colors: [
                         .netflixBlack.opacity(0),
                         .netflixBlack.opacity(0.4),
                         .netflixBlack.opacity(0.4),
-                        .netflixBlack.opacity(0.4),
+                        .netflixBlack.opacity(0.4)
                     ],
                     startPoint: .top,
                     endPoint: .bottom)
-                .cornerRadius(10)
-                .padding(.horizontal, 40)
             )
         }
         .foregroundColor(.netflixWhite)
-        .onTapGesture {
+        .cornerRadius(10)
+        .aspectRatio(0.8, contentMode: .fit)
+        .asButton(.tap) {
             onBackgroundPressed?()
         }
     }
     
     private var backgroundImage: some View {
-        Rectangle()
-            .opacity(0.001)
-            .overlay {
-                ImageLoaderView(urlString: imageName,
-                                cornerRadius: 10,
-                                aspectRatio: 0.8,
-                                resizingMode: .fill)
-                .padding(.horizontal, 40)
-            }.clipped()
+        ImageLoaderView(urlString: imageName,
+                        resizingMode: .fill)
     }
     
     private var netflixFilm: some View {
@@ -73,7 +67,7 @@ struct NetflixHeroCell: View {
                 .kerning(3)
                 .font(.subheadline)
                 .fontWeight(.semibold)
-                .foregroundStyle(.netflixLightGray)
+                .foregroundStyle(.netflixWhite)
         }
     }
     
@@ -118,7 +112,7 @@ struct NetflixHeroCell: View {
         .foregroundStyle(.netflixDarkGray)
         .background(.netflixWhite)
         .cornerRadius(4)
-        .onTapGesture {
+        .asButton(.press) {
             onPlayPressed?()
         }
     }
@@ -133,7 +127,7 @@ struct NetflixHeroCell: View {
         .foregroundStyle(.netflixWhite)
         .background(.netflixDarkGray)
         .cornerRadius(4)
-        .onTapGesture {
+        .asButton(.press) {
             onPlayPressed?()
         }
     }
@@ -141,4 +135,5 @@ struct NetflixHeroCell: View {
 
 #Preview {
     NetflixHeroCell()
+        .padding(40)
 }

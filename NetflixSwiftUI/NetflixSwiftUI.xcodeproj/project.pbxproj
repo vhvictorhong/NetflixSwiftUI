@@ -20,6 +20,9 @@
 		2B19F9EC2BCED1500063E82A /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B19F9EB2BCED1500063E82A /* DatabaseHelper.swift */; };
 		2B19F9EF2BCED2490063E82A /* ProductArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B19F9EE2BCED2490063E82A /* ProductArray.swift */; };
 		2B19F9F12BCED43C0063E82A /* UserArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B19F9F02BCED43C0063E82A /* UserArray.swift */; };
+		2BB1EEBB2BD345E80036CB7D /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2BB1EEBA2BD345E80036CB7D /* SDWebImageSwiftUI */; };
+		2BFF5C172BD3443C003184EA /* SwiftfulUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2BFF5C162BD3443C003184EA /* SwiftfulUI */; };
+		2BFF5C1A2BD34464003184EA /* SwiftfulRouting in Frameworks */ = {isa = PBXBuildFile; productRef = 2BFF5C192BD34464003184EA /* SwiftfulRouting */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BB1EEBB2BD345E80036CB7D /* SDWebImageSwiftUI in Frameworks */,
+				2BFF5C172BD3443C003184EA /* SwiftfulUI in Frameworks */,
+				2BFF5C1A2BD34464003184EA /* SwiftfulRouting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +156,11 @@
 			dependencies = (
 			);
 			name = NetflixSwiftUI;
+			packageProductDependencies = (
+				2BFF5C162BD3443C003184EA /* SwiftfulUI */,
+				2BFF5C192BD34464003184EA /* SwiftfulRouting */,
+				2BB1EEBA2BD345E80036CB7D /* SDWebImageSwiftUI */,
+			);
 			productName = NetflixSwiftUI;
 			productReference = 2B19F9CA2BCE0E860063E82A /* NetflixSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -178,6 +189,11 @@
 				Base,
 			);
 			mainGroup = 2B19F9C12BCE0E860063E82A;
+			packageReferences = (
+				2BFF5C152BD3443C003184EA /* XCRemoteSwiftPackageReference "SwiftfulUI" */,
+				2BFF5C182BD34464003184EA /* XCRemoteSwiftPackageReference "SwiftfulRouting" */,
+				2BB1EEB92BD345E80036CB7D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 2B19F9CB2BCE0E860063E82A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -420,6 +436,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2BB1EEB92BD345E80036CB7D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.2;
+			};
+		};
+		2BFF5C152BD3443C003184EA /* XCRemoteSwiftPackageReference "SwiftfulUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftfulThinking/SwiftfulUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+		2BFF5C182BD34464003184EA /* XCRemoteSwiftPackageReference "SwiftfulRouting" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftfulThinking/SwiftfulRouting.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.3.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2BB1EEBA2BD345E80036CB7D /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2BB1EEB92BD345E80036CB7D /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		2BFF5C162BD3443C003184EA /* SwiftfulUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2BFF5C152BD3443C003184EA /* XCRemoteSwiftPackageReference "SwiftfulUI" */;
+			productName = SwiftfulUI;
+		};
+		2BFF5C192BD34464003184EA /* SwiftfulRouting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2BFF5C182BD34464003184EA /* XCRemoteSwiftPackageReference "SwiftfulRouting" */;
+			productName = SwiftfulRouting;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2B19F9C22BCE0E860063E82A /* Project object */;
 }
