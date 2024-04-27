@@ -28,5 +28,25 @@ struct ProductArray: Codable {
         let recentlyAdded: Bool = {
             return Int.random(in: 1...4) == 1
         }()
+        
+        static var mock: Product {
+            Product(
+                id: 123,
+                title: "Example product title",
+                description: "This is some mock product description that goes here.",
+                price: 999,
+                discountPercentage: 15,
+                rating: 4.5,
+                stock: 50,
+                brand: "Apple",
+                category: "Electronic Devices",
+                thumbnail: Constants.randomImage,
+                images: [
+                    Constants.randomImage,
+                    Constants.randomImage,
+                    Constants.randomImage
+                ]
+            )
+        }
     }
 }
