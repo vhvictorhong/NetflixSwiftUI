@@ -24,7 +24,15 @@ struct NetflixMovieDetailsView: View {
                     
                 }
                 ScrollView(.vertical) {
-                    
+                    VStack(spacing: 16) {
+                        NetflixDetailsProductView(title: product.title, isNew: true, yearReleased: "2024", seasonCount: 4, hasClosedCaption: true, isTopTen: 6, descriptionText: product.description, castText: "Cast: Victor, Your Name, Someone Else") {
+                            
+                        } onDownloadPressed: {
+                            
+                        }
+
+                    }
+                    .padding(8)
                 }
                 .scrollIndicators(.hidden)
             }
