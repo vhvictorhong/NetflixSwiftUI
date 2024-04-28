@@ -25,6 +25,7 @@
 		2B460D7C2BDC9C27007E9249 /* NetflixDetailsProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B460D7B2BDC9C27007E9249 /* NetflixDetailsProductView.swift */; };
 		2B460D7E2BDDECD2007E9249 /* MyListButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B460D7D2BDDECD2007E9249 /* MyListButton.swift */; };
 		2B460D802BDDF003007E9249 /* RateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B460D7F2BDDF003007E9249 /* RateButton.swift */; };
+		2B460D822BDDF685007E9249 /* ShareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B460D812BDDF685007E9249 /* ShareButton.swift */; };
 		2BB1EEBB2BD345E80036CB7D /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2BB1EEBA2BD345E80036CB7D /* SDWebImageSwiftUI */; };
 		2BB1EEBD2BD351D10036CB7D /* ProductRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1EEBC2BD351D10036CB7D /* ProductRow.swift */; };
 		2BB1EEBF2BD354160036CB7D /* NetflixMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1EEBE2BD354160036CB7D /* NetflixMovieCell.swift */; };
@@ -52,6 +53,7 @@
 		2B460D7B2BDC9C27007E9249 /* NetflixDetailsProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixDetailsProductView.swift; sourceTree = "<group>"; };
 		2B460D7D2BDDECD2007E9249 /* MyListButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListButton.swift; sourceTree = "<group>"; };
 		2B460D7F2BDDF003007E9249 /* RateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateButton.swift; sourceTree = "<group>"; };
+		2B460D812BDDF685007E9249 /* ShareButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareButton.swift; sourceTree = "<group>"; };
 		2BB1EEBC2BD351D10036CB7D /* ProductRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRow.swift; sourceTree = "<group>"; };
 		2BB1EEBE2BD354160036CB7D /* NetflixMovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixMovieCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,6 +138,7 @@
 				2B460D792BDC957C007E9249 /* NetflixDetailsHeaderView.swift */,
 				2B460D7B2BDC9C27007E9249 /* NetflixDetailsProductView.swift */,
 				2B460D7F2BDDF003007E9249 /* RateButton.swift */,
+				2B460D812BDDF685007E9249 /* ShareButton.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 				2BB1EEBF2BD354160036CB7D /* NetflixMovieCell.swift in Sources */,
 				2B19F9DF2BCE108B0063E82A /* NetflixHomeView.swift in Sources */,
 				2B19F9EA2BCECD8E0063E82A /* Constants.swift in Sources */,
+				2B460D822BDDF685007E9249 /* ShareButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
