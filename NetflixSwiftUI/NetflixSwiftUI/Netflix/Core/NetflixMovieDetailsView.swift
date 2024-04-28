@@ -9,9 +9,14 @@ import SwiftUI
 
 struct NetflixMovieDetailsView: View {
     
+    @Binding var isPresented: Bool
+    
+    @State private var showProduct = false
+    
     @State private var progress: Double = 0.2
     @State private var isMyList: Bool = false
     @State private var products: [ProductArray.Product] = []
+    @State private var selectProduct: ProductArray.Product? = nil
     
     var product: ProductArray.Product = .mock
     
@@ -36,13 +41,18 @@ struct NetflixMovieDetailsView: View {
             await getData()
         }
         .toolbar(.hidden, for: .navigationBar)
+        .sheet(isPresented: $showProduct, content: {
+            if let selectProduct {
+                NetflixMovieDetailsView(isPresented: $showProduct, product: selectProduct)
+            }
+        })
     }
     
     private var headerVideoView: some View {
         NetflixDetailsHeaderView(imageName: product.firstImage, progress: progress) {
             
         } onXMarkPressed: {
-            
+            isPresented = false
         }
     }
     
@@ -91,6 +101,10 @@ struct NetflixMovieDetailsView: View {
                         isRecentlyAdded: product.recentlyAdded,
                         topTenRanking: nil
                     )
+                    .onTapGesture {
+                        selectProduct = product
+                        showProduct = true
+                    }
                 }
             })
         }
@@ -109,5 +123,5 @@ struct NetflixMovieDetailsView: View {
 }
 
 #Preview {
-    NetflixMovieDetailsView()
+    NetflixMovieDetailsView(isPresented: .constant(false))
 }

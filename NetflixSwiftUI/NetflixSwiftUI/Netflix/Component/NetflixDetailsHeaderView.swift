@@ -37,7 +37,7 @@ struct NetflixDetailsHeaderView: View {
                     )
                     .frame(width: 36, height: 36)
                     .onTapGesture {
-                        onAirplayPressed
+                        onAirplayPressed?()
                     }
                 Circle()
                     .fill(.netflixDarkGray)
@@ -47,7 +47,7 @@ struct NetflixDetailsHeaderView: View {
                     )
                     .frame(width: 36, height: 36)
                     .onTapGesture {
-                        onXMarkPressed
+                        onXMarkPressed?()
                     }
             }
             .foregroundStyle(.netflixWhite)

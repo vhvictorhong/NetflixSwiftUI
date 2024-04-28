@@ -10,6 +10,8 @@ import SwiftfulUI
 
 struct NetflixHomeView: View {
     
+    @State private var showProduct = false
+    
     @State private var filters = FilterModel.mockArray
     @State private var selectedFilter: FilterModel? = nil
     @State private var fullHeaderSize: CGSize = .zero
@@ -18,6 +20,7 @@ struct NetflixHomeView: View {
     @State private var heroProduct: ProductArray.Product? = nil
     @State private var currentUser: UserArray.User? = nil
     @State private var productRows: [ProductRow] = []
+    @State private var selectProduct: ProductArray.Product? = nil
     
     var body: some View {
         ZStack(alignment: .top) {
@@ -31,6 +34,11 @@ struct NetflixHomeView: View {
             await getData()
         }
         .toolbar(.hidden, for: .navigationBar)
+        .sheet(isPresented: $showProduct, content: {
+            if let selectProduct {
+                NetflixMovieDetailsView(isPresented: $showProduct, product: selectProduct)
+            }
+        })
     }
     
     private var gradientView: some View {
@@ -149,9 +157,11 @@ struct NetflixHomeView: View {
             categories: [
                 product.category.capitalized,
                 product.brand]) {
-                    
+                    selectProduct = product
+                    showProduct = true
                 } onPlayPressed: {
-                    
+                    selectProduct = product
+                    showProduct = true
                 } onMyListPressed: {
                     
                 }
@@ -174,6 +184,10 @@ struct NetflixHomeView: View {
                                     isRecentlyAdded: product.recentlyAdded,
                                     topTenRanking: rowIndex == 1 ? (index + 1) : nil
                                 )
+                                .onTapGesture {
+                                    selectProduct = product
+                                    showProduct = true
+                                }
                             }
                         }
                         .padding(.horizontal, 16)
