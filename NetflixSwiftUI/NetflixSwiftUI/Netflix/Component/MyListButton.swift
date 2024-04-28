@@ -13,7 +13,7 @@ struct MyListButton: View {
     var onButtonPressed: (() -> Void)? = nil
     
     var body: some View {
-        VStack {
+        VStack(spacing: 8) {
             ZStack {
                 Image(systemName: "checkmark")
                     .opacity(isMyList ? 1 : 0)
