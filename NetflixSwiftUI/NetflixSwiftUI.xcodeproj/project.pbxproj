@@ -23,6 +23,7 @@
 		2B460D782BDC941B007E9249 /* NetflixMovieDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B460D772BDC941B007E9249 /* NetflixMovieDetailsView.swift */; };
 		2B460D7A2BDC957C007E9249 /* NetflixDetailsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B460D792BDC957C007E9249 /* NetflixDetailsHeaderView.swift */; };
 		2B460D7C2BDC9C27007E9249 /* NetflixDetailsProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B460D7B2BDC9C27007E9249 /* NetflixDetailsProductView.swift */; };
+		2B460D7E2BDDECD2007E9249 /* MyListButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B460D7D2BDDECD2007E9249 /* MyListButton.swift */; };
 		2BB1EEBB2BD345E80036CB7D /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2BB1EEBA2BD345E80036CB7D /* SDWebImageSwiftUI */; };
 		2BB1EEBD2BD351D10036CB7D /* ProductRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1EEBC2BD351D10036CB7D /* ProductRow.swift */; };
 		2BB1EEBF2BD354160036CB7D /* NetflixMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB1EEBE2BD354160036CB7D /* NetflixMovieCell.swift */; };
@@ -48,6 +49,7 @@
 		2B460D772BDC941B007E9249 /* NetflixMovieDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixMovieDetailsView.swift; sourceTree = "<group>"; };
 		2B460D792BDC957C007E9249 /* NetflixDetailsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixDetailsHeaderView.swift; sourceTree = "<group>"; };
 		2B460D7B2BDC9C27007E9249 /* NetflixDetailsProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixDetailsProductView.swift; sourceTree = "<group>"; };
+		2B460D7D2BDDECD2007E9249 /* MyListButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListButton.swift; sourceTree = "<group>"; };
 		2BB1EEBC2BD351D10036CB7D /* ProductRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRow.swift; sourceTree = "<group>"; };
 		2BB1EEBE2BD354160036CB7D /* NetflixMovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetflixMovieCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,6 +132,7 @@
 				2BB1EEBE2BD354160036CB7D /* NetflixMovieCell.swift */,
 				2B460D792BDC957C007E9249 /* NetflixDetailsHeaderView.swift */,
 				2B460D7B2BDC9C27007E9249 /* NetflixDetailsProductView.swift */,
+				2B460D7D2BDDECD2007E9249 /* MyListButton.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				2B19F9D02BCE0E860063E82A /* ContentView.swift in Sources */,
 				2B19F9E82BCECCDB0063E82A /* ImageLoaderView.swift in Sources */,
 				2B460D782BDC941B007E9249 /* NetflixMovieDetailsView.swift in Sources */,
+				2B460D7E2BDDECD2007E9249 /* MyListButton.swift in Sources */,
 				2B460D7C2BDC9C27007E9249 /* NetflixDetailsProductView.swift in Sources */,
 				2B19F9F12BCED43C0063E82A /* UserArray.swift in Sources */,
 				2B460D7A2BDC957C007E9249 /* NetflixDetailsHeaderView.swift in Sources */,
