@@ -31,7 +31,7 @@ struct NetflixFilterCell: View {
                     .stroke(lineWidth: 1)
             }
         )
-        .foregroundColor(.netflixLightGray)
+        .foregroundStyle(.netflixLightGray)
     }
 }
 

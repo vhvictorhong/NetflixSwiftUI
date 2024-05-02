@@ -29,7 +29,7 @@ struct NetflixHomeView: View {
             scrollView
             filterBarView
         }
-        .foregroundColor(.netflixWhite)
+        .foregroundStyle(.netflixWhite)
         .task {
             await getData()
         }

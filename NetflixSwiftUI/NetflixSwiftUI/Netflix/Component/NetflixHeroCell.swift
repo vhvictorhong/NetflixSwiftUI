@@ -44,7 +44,7 @@ struct NetflixHeroCell: View {
                     endPoint: .bottom)
             )
         }
-        .foregroundColor(.netflixWhite)
+        .foregroundStyle(.netflixWhite)
         .cornerRadius(10)
         .aspectRatio(0.8, contentMode: .fit)
         .asButton(.tap) {

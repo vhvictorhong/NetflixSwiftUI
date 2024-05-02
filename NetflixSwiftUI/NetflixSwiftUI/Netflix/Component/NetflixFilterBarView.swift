@@ -37,7 +37,7 @@ struct NetflixFilterBarView: View {
                             Circle()
                                 .stroke(lineWidth: 1)
                         )
-                        .foregroundColor(.netflixLightGray)
+                        .foregroundStyle(.netflixLightGray)
                         .background(Color.black.opacity(0.001))
                         .onTapGesture {
                             onXMarkPressed?()
